@@ -1,0 +1,79 @@
+</*
+file /~dpickler/assignments/inclass2/piano.css
+
+Full Name: Donovyn Arthur Pickler
+Email Address: draconicdon@gmail.com
+Student Email Address: donovyn_pickler@student.uml.edu
+Student Number: 01402662
+Course Number: COMP.4610.201
+Description:  CSS style sheet for in class assignment 2.
+*/
+
+body, page, logo, navigation {
+	display: block;
+}
+	
+	body {
+	width: 80%;
+	margin-left: 5%;
+	margin-right: 5%;
+	min-width: 720px;
+	max-width: 900px;
+	
+	font-size: 80%;
+	font-family: "Courier New", Courier, monospace;
+	letter-spacing: 0.15em;
+	background-color: white;
+	
+	border: 5px double black;
+
+}
+
+#page{
+	float: center;
+	text-align: center;
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+#logo{
+	
+}
+
+#navigation{
+	border-top: thin solid black;
+	border-bottom: thin solid black;
+	padding: 6px 18px 5px 18px;
+	font-style: none;
+	list-style: none;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+#navigation li{
+	display: inline;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+navigation a{
+	text-decoration: none;
+}
+
+#navigation a:link{
+	text-decoration: none;
+	color: black;
+	
+}
+
+#navigation a:visited{
+	text-decoration: none;
+	color: red;
+}
+
+#navigation a:hover{
+	text-decoration: none;
+	color:red;
+}

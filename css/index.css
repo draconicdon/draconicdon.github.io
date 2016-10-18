@@ -1,0 +1,179 @@
+/*
+file /~dpickler/css/index.html
+
+Full Name: Donovyn Arthur Pickler
+Email Address: draconicdon@gmail.com
+Student Email Address: donovyn_pickler@student.uml.edu
+Student Number: 01402662
+Course Number: COMP.4610.201
+Description:  This is the css style sheet for the index page.
+*/
+
+/*
+Declaring which items will use the block styling,
+also setting the background to all blocks to a dark transparent.
+*/
+
+/*
+Setting up the primary area for content.
+Simple background image that transitions to a solid color.
+Setting the world text to a color that will show up on the background.
+*/
+body{
+	
+	height: 100%;
+	width: 100%;
+	min-height: 600px;
+	min-width: 600px;
+	margin: 5%;
+	
+	background-image: url('../img/uml_background.png');
+	background-position: top;
+	background-repeat: no-repeat;
+	background-color: rgba(0, 31,79, 1);
+	background-size: 100% 100%;
+	
+	color: white;
+}
+
+/*Content block allowing for better organization*/
+
+
+
+
+/*A header belongs at the top, and should be noticable.*/
+header{
+	
+	
+	width: 90%;
+	margin-bottom: 30px;
+	
+	font-weight: bold;
+	font-size: 225%;
+
+	border-bottom: thin solid white;
+	padding: 5px;
+	
+}
+
+/*Likewise the footer should be at the bottom, and look nice.*/
+/*
+footer{
+	display: block;
+	text-align: center;
+	margin: 10px auto 10px auto;
+	padding-top: 5px;
+	width: 45%;
+	font-size: 75%;
+	font-style: italic;
+	border-top: thin solid white;
+}
+*/
+
+/*Supplied footer, edited to work better with my page*/
+footer {
+	border-top: thin solid white;
+	text-align: center;
+    width: 45%;
+    margin: 50px auto 20px;
+    color: white;
+    font-size: 16px;
+}
+
+footer a {
+    text-decoration: none;
+    font-weight: bold;
+    color: inherit;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* change the color of the HTML5/CSS# icons on hover just for fun */
+footer a:hover .fa-html5 {
+    color: #F16529;
+    transition: color .3s ease-in;
+}
+
+footer a:hover .fa-css3 {
+    color: #1C88C7;
+    transition: color .3s ease-in;
+}
+
+
+#stuff{
+	display: block;
+	
+}
+
+#index{
+	
+	background: rgba(0,0,0,0.3);
+	display: block;
+	
+	float: left;
+	
+	margin-right: 10px;
+	margin-top: 15px;
+	padding: 10px;
+	
+	font-size: 125%;
+	
+	
+	width: 30%;
+	height: 80%;
+	
+	min-width: 200px;
+	min-height: 600px;
+	
+	max-width: 300px;
+	max-height: 1200px;
+}
+
+#index a{
+	color: white;
+}
+
+
+#cat{
+	
+	background: rgba(0,0,0,0.3);
+	display: block;
+	
+	margin-top: 30px;
+	margin-left: 350px;
+	width: 25%;
+	height:80%;
+	padding: 20px;
+	
+	text-align: center;
+	
+}
+
+#cat p{
+	padding-left: 10%;
+	width: 75%;
+}
+
+#cat img{
+	display: block;
+	border: 5px double white;
+	margin: 10%;
+	width: 300px;
+	height: 450px;
+}
+
+#badges{
+	display: block;
+}
+
+#serious-text{
+	font-size: 100%;
+	font-style: normal;
+	font-weight: normal;
+	background: white;
+	color: black;
+	font-family: "Comic Sans MS";
+}
+

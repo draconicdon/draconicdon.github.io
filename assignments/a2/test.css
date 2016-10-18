@@ -1,0 +1,80 @@
+/*
+file /~dpickler/assignments/a2/test.css
+
+Full Name: Donovyn Arthur Pickler
+Email Address: draconicdon@gmail.com
+Student Email Address: donovyn_pickler@student.uml.edu
+Student Number: 01402662
+Course Number: COMP.4610.201
+Description:  Index for all GUI1 assignments, and possibly more.
+*/
+
+serious-text{
+	font-style: none;
+	font-size: 100%;
+	font-weight: none;
+	background: white;
+	color: black;
+	font-family: "Comic Sans MS";
+}
+
+.cat-picture{
+	text-align: center;
+	border: 2px dotted black;
+	padding: 25px;
+	padding-bottom: 100px;
+	margin: 0px;
+	width: 50%;
+	position: relative;
+	right: 0px;
+	top:50%;
+	
+}
+
+img-text{
+	position: relative;
+	bottom: 0px;
+	
+	padding: 3px;
+	text-align: center;
+	border: 3px solid blue;
+}
+
+box-img{
+	top: 0px;
+	padding:15px
+}
+
+/* learned from http://www.w3schools.com/css/css_image_transparency.asp */
+box-text{
+	padding: 10%;
+	text-align: left;
+	background: rgba(0,0,0,0.3);
+}
+
+header{
+	border: 2px solid white;
+	font-style: bold underline;
+	padding: 5px;
+	font-size: 225%;
+	position: static:
+	
+}
+
+footer{
+	text-align: center;
+}
+
+body{
+	background-color: gray;
+	color: white;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+strong{
+	color: red;
+	font-family: courier;
+	font-size: 130%;
+	font-style: bold;
+}
