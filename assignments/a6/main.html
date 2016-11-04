@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Multiplication Table</title>
+	<!-- Lets try using bootstrap for this. -->
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/multTable.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<!-- Forgot that text-center was a thing, spent too long figuring that out. -->
+	<div class="row">
+		<header class="col-sm-10 col-sm-push-1 text-center">Multiplication Table Generator</header>
+	</div>
+	<!--  -->
+	<div class="row">
+		<div class="col-sm-10 col-sm-push-1">
+		<!--  -->
+			<div class="content">
+				<div class="row">
+					<div class="form-group col-sm-6">
+						<label for="xStart">x-axis start:</label>
+						<input type="int" class="form-control" id="xStart">
+					</div>
+					<div class="form-group col-sm-6">
+						<label for="yStart">y-axis start:</label>
+						<input type="int" class="form-control" id="yStart">
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-sm-6">
+						<label for="xEnd">x-axis end:</label>
+						<input type="int" class="form-control" id="xEnd">
+					</div>
+					<div class="form-group col-sm-6">
+						<label for="yEnd">y-axis end:</label>
+						<input type="int" class="form-control" id="yEnd">
+					</div>
+				</div>
+				<div class="row">
+					<div class="container col-sm-6 col-sm-push-3">
+						<input id="creatorButton" type="submit" class="btn btn btn-primary btn-block" value="Create Table">
+					</div>
+				</div>
+				<div class="row">
+					<table class="col-sm-10 col-sm-push-1" id="table">
+						<!-- Put generated field here with javascript-->
+					</table>
+				</div>
+			</div>
+		</div>
+			
+	</div>
+
+	<script src="js/multTable.js"></script>
+</body>
+
+
+</html>
