@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Multiplication Table</title>
+	<!-- Lets try using bootstrap for this. -->
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/multTable.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<!-- Forgot that text-center was a thing, spent too long figuring that out. -->
+	<div class="row">
+		<header class="col-sm-10 col-xs-push-1 text-center">Multiplication Table Generator</header>
+	</div>
+	<!--  -->
+	<div class="row">
+		<div class="col-sm-10 col-xs-push-1">
+		<!--  -->
+			<div class="content" id="forms" >
+
+				<div class="row">
+					<div class="form-group col-xs-6">
+						<label for="xStart">x-axis start:</label>
+						<input type="int" class="form-control" id="xStart">
+					</div>
+					<div class="form-group col-xs-6">
+						<label for="yStart">y-axis start:</label>
+						<input type="int" class="form-control" id="yStart">
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-xs-6">
+						<label for="xEnd">x-axis end:</label>
+						<input type="int" class="form-control" id="xEnd">
+					</div>
+					<div class="form-group col-xs-6">
+						<label for="yEnd">y-axis end:</label>
+						<input type="int" class="form-control" id="yEnd">
+					</div>
+				</div>
+				<div class="row">
+					<div class="container col-xs-6 col-xs-push-3">
+						<input id="creatorButton" type="submit" class="btn btn btn-primary btn-block" value="Create Table">
+					</div>
+				</div>
+				<div class="row">
+					<table class="col-sm-10 col-xs-push-1" id="table">
+						<!-- Put generated field here with javascript-->
+					</table>
+				</div>
+			</div>
+		</div>
+			
+	</div>
+
+	
+	
+	
+	<script src="js/multTable.js"></script>
+	
+	<!--
+	<script src="js/jquery-validation/dist/jquery.validate.js"></script>
+	
+	
+	<script type="text/javascript">
+			
+		var highlighter = {
+			light : function(strId){
+				$('#' + strId).css({"border" : "3px dashed red"});
+				$( '#' + strId).focus() ;
+			},
+			
+			unlight : function(strId){
+				$('#' + strId).css({"border" : "  "});
+			},
+		}
+
+
+	$(document).ready( function() {
+		$('#form-group').validate({
+			rules: {
+				xStart:{
+					required: true,
+					number: true
+				},
+				xEnd:{
+					required: true,
+					number: true
+				},
+				yStart:{
+					required: true,
+					number: true
+				},
+				yEnd:{
+					required: true,
+					number: true
+				}
+			},
+			messages : {
+				  xBegin : {
+					required : function() { 
+					  tblValidator.highlightError( "xBegin" ) ;
+					  return "<br>The Minimum Column Value is<br> &nbsp; required." ; 
+					} ,
+					number : function() { 
+					  tblValidator.highlightError( "xBegin" ) ;
+					  return "<br>Please enter only numbers for the<br> &nbsp; Minimum Column Value." ; 
+					}
+				  } ,
+				  xEnd : {
+					required : function() { 
+					  tblValidator.highlightError( "xEnd" ) ;
+					  return "<br>The Maximum Column Value is<br> &nbsp; required." ; 
+					} ,
+					number : function() { 
+					  tblValidator.highlightError( "xEnd" ) ;
+					  return "<br>Please enter only numbers for the<br> &nbsp; Maximum Column Value." ; 
+					}
+				  } ,
+				  yBegin : {
+					required : function() { 
+					  tblValidator.highlightError( "yBegin" ) ;
+					  return "<br>The Minimum Row Value is<br> &nbsp; required." ; 
+					} ,
+					number : function() { 
+					  tblValidator.highlightError( "yBegin" ) ;
+					  return "<br>Please enter only numbers for the<br> &nbsp; Minimum Row Value." ; 
+					}
+				  } ,
+				  yEnd : {
+					required : function() { 
+					  tblValidator.highlightError( "yEnd" ) ;
+					  return "<br>The Maximum Row Value is<br> &nbsp; required." ; 
+					} ,
+					number : function() { 
+					  tblValidator.highlightError( "yEnd" ) ;
+					  return "<br>Please enter only numbers for the<br> &nbsp; Maximum Row Value." ; 
+					}
+				  }
+				} ,
+		 
+			messages:{
+				xStart:{
+					required: function(){
+						highlighter.light("xStart");
+						return "The start of the x-axis is required.";
+					},
+					digits: function(){
+						highlighter.light("xStart");
+						return "The start of the x-axis field must be a number.";
+					}
+				},
+				xEnd:{
+					required: function(){
+						highlighter.light("xEnd");
+						return "The end of the x-axis is required.";
+					},
+					digits: function(){
+						highlighter.light("xEnd");
+						return "The end of the x-axis field must be a number.";
+					}
+				},
+				yStart:{
+					required: function(){
+						highlighter.light("yStart");
+						return "The start of the y-axis is required.";
+					},
+					digits: function(){
+						highlighter.light("yStart");
+						return "The start of the y-axis field must be a number.";
+					}
+				},
+				yEnd:{
+					required: function(){
+						highlighter.light("yEnd");
+						return "The end of the y-axis is required.";
+					},
+					digits: function(){
+						highlighter.light("yEnd");
+						return "The end of the y-axis field must be a number.";
+					}
+				}
+			},	
+			errorLocation : function( error, element ) {
+					$(error).appendTo( $("#table") ) ;
+				},
+			success : function( error, element ) {
+				  $(element).css( { "border" : "" } ) ; // reset the border to its default
+				  // for ( var k = 0 ; k < element.attributes.length ; k++ ) {
+				  //   console.log( element.attributes[k].name + " = " + element.attributes[k].value ) ;
+				  // }
+				  // the above returns property names: type, name, and id
+				}
+		});
+	});
+
+	</script>
+	
+	-->
+	
+	
+</body>
+
+
+</html>
