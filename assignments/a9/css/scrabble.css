@@ -1,0 +1,131 @@
+/*
+Full Name: Donovyn Arthur Pickler
+Email Address: draconicdon@gmail.com
+Student Email Address: donovyn_pickler@student.uml.edu
+Student Number: 01402662
+Course Number: COMP.4610.201
+Description:  CSS file for assignment 9
+
+Detailing the visual presentation of the tiles, targets, and the general board state.
+*/
+
+body {
+	margin-top: 30px;
+	font-family: "Comic Sans MS";
+	border: thin solid gray;
+}
+
+/*
+Tiles that will be interacted with by the user.
+Tile images sourced from: https://teaching.cs.uml.edu/~heines/91.461/91.461-2015-16f/461-assn/Scrabble_Tiles.html
+*/
+#tile {
+	width: 60px;
+	height: 60px;
+	background-size: 100% 100%;
+	border: 2px solid black;
+	margin: 3px;
+	padding: 1px;
+}
+
+/*
+Holds the targets, simple as that.
+*/
+#field {
+	border: thin dotted black;
+	#height:80px;
+	max-width:750px;
+	margin-bottom:15px;
+}
+
+/*
+Target spaces that the tiles will be dropped onto.
+Images created by me.
+*/
+target {
+	width: 60px;
+	height: 60px;
+	background-image: url("../image/spaces/blank.png");
+	background-size: 100% 100%;
+	border: 2px solid black;
+	margin: 2px;
+	padding: 1px;
+}
+
+/*
+Scrabble rack that the tiles will be positioned over.
+Image sourced from https://images-na.ssl-images-amazon.com/images/I/31cptDEmRLL.jpg
+*/
+#rack{
+	width: 600px;
+	height: 80px;
+	margin-top:15px;
+	background-repeat: no-repeat;
+	background-size: 100% 80px;
+	background-image: url("../image/rack.png");
+}
+
+/*
+Exactly what it claims to be, will hold the running score and if there is additional 
+time left over I will have it keep track of some additional information.
+*/
+#scoreboard{
+	
+	padding: 15px;
+	border: 3px dashed black;
+	
+}
+
+#score{
+	
+}
+
+.button{
+	max-width: 120px;
+	height: 25px;
+}
+
+header {
+	font-size: 135%;
+	font-weight: bold;
+	border-bottom: thin solid black;
+	margin-bottom: 25px;
+}
+
+footer {
+	text-align: center;
+	width: 50%;
+	border-top: thin solid black;
+	margin-top: 25px;
+	
+}
+
+
+.A{}
+.B{}
+.C{}
+.D{}
+.E{}
+.F{}
+.G{}
+.H{}
+.I{}
+.J{}
+.K{}
+.L{}
+.M{}
+.N{}
+.O{}
+.P{}
+.Q{}
+.R{}
+.S{}
+.T{}
+.U{}
+.V{}
+.W{}
+.X{}
+.Y{}
+.Z{}
+
+
